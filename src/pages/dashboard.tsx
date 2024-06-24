@@ -31,15 +31,15 @@ const dashboard = () => {
 
   return (
     <section className={style.container}>
-      <div>
+      <div className={style.sidebar}>
         <Image src="/images/quotus-logo.png" alt='logo quotus' width={200} height={200} loading="lazy" />
-        <div >
+        <div className={style.sidebarIcons}>
           {dataIconsLink.map((item,key)=>(
             <IconLink text={item.text} icon={item.icon} key={key}/>
           ))}
         </div>
       </div>
-      <div>
+      <div className={style.mainContent}>
 
       </div>
     </section>

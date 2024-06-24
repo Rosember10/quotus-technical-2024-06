@@ -1,12 +1,28 @@
 .container {
     display: flex;
     flex-direction: row;
-    background-color: antiquewhite;
     max-width: 1600px;
     width: 100%;
     margin: auto;
+    height: 100vh;
+    padding: 1%;
 }
 
 .sidebar{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    border-radius: 0.4rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+
+.sidebarIcons{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.mainContent{
     
 }
