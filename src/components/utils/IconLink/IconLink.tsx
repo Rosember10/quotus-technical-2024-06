@@ -1,16 +1,17 @@
 import React from 'react'
 import Image from 'next/image';
 import style from './iconlink.module.css'
+import { IconType } from 'react-icons';
 
 interface IconlinkProps{
     text:string;
-    icon:string;
+    Icon: IconType; 
 }
 
-const IconLink = ({text,icon}:IconlinkProps) => {
+const IconLink = ({text,Icon}:IconlinkProps) => {
   return (
     <div className={style.container}>
-         <Image src={icon} alt='icon' width={22} height={22} />
+         <Icon className={text === 'Analytics' ? style.svgBlack : style.svg} />
          <span className={text === 'Analytics' ? style.boldBlack : style.text}>{text}</span>
     </div>
   )

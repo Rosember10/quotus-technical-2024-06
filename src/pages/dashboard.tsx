@@ -1,31 +1,55 @@
 import React from 'react'
+import {
+  Chart,LineElement,Title,Tooltip,Legend,LinearScale,CategoryScale,PointElement, BarElement,Filler,
+} from "chart.js";
 import style from '../styles/dashboard.module.css';
 import Image from 'next/image';
 import IconLink from '@/components/utils/IconLink/IconLink';
+import { TbSmartHome } from "react-icons/tb";
+import { LuSettings } from "react-icons/lu";
+import { LuDownloadCloud } from "react-icons/lu";
+import { MdOutlineAnalytics } from "react-icons/md";
+import { CiUser } from "react-icons/ci";
 
+
+Chart.register(
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  BarElement,
+  Filler,
+);
 
 const dashboard = () => {
+
+
+
+
 
   const dataIconsLink = [
     {
       text:'General' , 
-      icon:'/images/icons/general.png'
+      icon:TbSmartHome
     },
     {
       text:'Settings' , 
-      icon:'/images/icons/settings.png'
+      icon:LuSettings
     },
     {
       text:'Import / Exports ' , 
-      icon:'/images/icons/import.png'
+      icon:LuDownloadCloud
     },
     {
       text:'Analytics' , 
-      icon:'/images/icons/analytics.png'
+      icon:MdOutlineAnalytics
     },
     {
       text:'Profile' , 
-      icon:'/images/icons/user.png'
+      icon:CiUser
     },
   ]
 
@@ -35,12 +59,12 @@ const dashboard = () => {
         <Image src="/images/quotus-logo.png" alt='logo quotus' width={200} height={200} loading="lazy" />
         <div className={style.sidebarIcons}>
           {dataIconsLink.map((item,key)=>(
-            <IconLink text={item.text} icon={item.icon} key={key}/>
+            <IconLink text={item.text} Icon={item.icon} key={key}/>
           ))}
         </div>
       </div>
       <div className={style.mainContent}>
-
+          <h2>Analytics</h2>
       </div>
     </section>
   )

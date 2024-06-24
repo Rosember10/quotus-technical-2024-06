@@ -14,3 +14,17 @@
     font-weight: bold;
     cursor: pointer;
   }
+
+  .svg {
+    width: 1.3rem;
+    height: 1.3rem;
+    color:#8B8A8F ;
+    
+   
+  }
+
+  .svgBlack {
+    color: black;
+    width: 1.3rem;
+    height: 1.3rem;
+  }
