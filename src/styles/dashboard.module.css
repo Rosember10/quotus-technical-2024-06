@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    background-color: antiquewhite;
+    max-width: 1600px;
+    width: 100%;
+    margin: auto;
+}
+
+.sidebar{
+    
+}

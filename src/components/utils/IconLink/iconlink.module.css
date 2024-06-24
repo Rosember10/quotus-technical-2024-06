@@ -1,0 +1,15 @@
+.container{
+   display: flex;
+   flex-direction: row;
+   gap: 0.5rem;
+   align-items: center;
+}
+
+.text {
+    color:#8B8A8F ;
+}
+
+.boldBlack {
+    color: black;
+    font-weight: bold;
+  }
