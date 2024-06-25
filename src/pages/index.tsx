@@ -69,10 +69,7 @@ const Home = () => {
   const [selectedKpis, setSelectedKpis] = useState<Option[]>([]);
   const [selectedKpiFormatGroup, setSelectedKpiFormatGroup] =
     useState<Option>();
-  const [
-    selectedKpiFormatAndFirstWordGroup,
-    setSelectedKpiFormatAndFirstWordGroup,
-  ] = useState<Option>();
+  const [ selectedKpiFormatAndFirstWordGroup, setSelectedKpiFormatAndFirstWordGroup] = useState<Option>();
 
   const { isOpen, onToggle } = useDisclosure();
 
@@ -167,7 +164,7 @@ const Home = () => {
               setSelectedDealerships(selectedOptions as Option[]);
             }}
             value={selectedDealerships}
-            placeholder="First select at leasr one dealership"
+            placeholder="First select at least one dealership"
             id="dealership-selector"
           />
         </NoSSR>
