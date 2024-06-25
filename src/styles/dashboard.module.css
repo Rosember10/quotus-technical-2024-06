@@ -40,6 +40,19 @@
     width: 100%;
 }
 
+.mainContent h1 {
+    font-weight: 400;
+    font-size: 1rem;
+    /* text-align: center; */
+    /* background-color: black;
+    color: white; */
+    color: #8B8A8F;
+    /* color:#091646 ; */
+   
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
 .titleContainer {
     display: flex;
     flex-direction: row;

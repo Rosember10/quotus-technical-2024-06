@@ -7,7 +7,8 @@ import { IconType } from 'react-icons';
 
 interface DataIconsLinkProps{
     text:string;
-    icon: IconType
+    icon: IconType;
+    select?:boolean;
 }
 
 export const dataIconsLink:DataIconsLinkProps[] = [
@@ -21,11 +22,12 @@ export const dataIconsLink:DataIconsLinkProps[] = [
     },
     {
       text: 'Import / Exports ',
-      icon: LuDownloadCloud
+      icon: LuDownloadCloud,
     },
     {
       text: 'Analytics',
-      icon: MdOutlineAnalytics
+      icon: MdOutlineAnalytics,
+      select:true
     },
     {
       text: 'Profile',

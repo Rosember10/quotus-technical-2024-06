@@ -127,12 +127,13 @@ const Dashboard = () => {
         <Image src="/images/quotus-logo.png" alt='logo quotus' width={200} height={200} loading="lazy" />
         <div className={style.sidebarIcons}>
           {dataIconsLink.map((item, key) => (
-            <IconLink text={item.text} Icon={item.icon} key={key} />
+            <IconLink text={item.text} Icon={item.icon} key={key} select={item.select}/>
           ))}
 
         </div>
       </div>
       <div className={style.mainContent}>
+      <h1>This Dashboard is a demo and some features are limited.</h1>
         <div className={style.titleContainer}>
           <MdOutlineAnalytics />
           <h2 >Analytics</h2>
@@ -140,7 +141,6 @@ const Dashboard = () => {
         <div className={style.chartContainer}>
           <div className={style.dealershipSelect}>
             <h3>Dealership</h3>
-            <p>you can select multiple dealerships</p>
             <NoSSR>
               <Select
                 isMulti
@@ -150,7 +150,7 @@ const Dashboard = () => {
                   setSelectedDealerships(selectedOptions as Option[]);
                 }}
                 value={selectedDealerships}
-                placeholder="First select at least one dealership"
+                placeholder="Select at least one dealership, you can select multiple dealerships"
                 id="dealership-selector"
               />
             </NoSSR>
