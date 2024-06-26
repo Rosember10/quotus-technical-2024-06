@@ -7,6 +7,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import style from './navbar.module.css'
+import { navItems } from '@/data/dataNav';
 
 /**
  * Interface defining the structure for navigation items.
@@ -51,17 +52,6 @@ export default function Navbar() {
     const handleMenu = () => {
         setIsMenuOpen(!isMenuOpen)
     }
-
-    /**
-     * Array of navigation items used in the Navbar component.
-     */
-    const navItems: NavItem[] = [
-        { path: '/', label: 'Features' },
-        { path: '/', label: 'Demo' },
-        { path: '/', label: 'About' }
-    ]
-
-
 
     const MenuIcon = isMenuOpen ? VscChromeClose : CiMenuBurger;
 
