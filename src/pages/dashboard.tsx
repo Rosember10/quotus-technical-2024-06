@@ -92,7 +92,7 @@ const Dashboard = () => {
   return (
     <section className={style.container}>
       <div className={style.sidebar}>
-        <Image src="/images/quotus-logo.png" alt='logo quotus' width={200} height={200} priority={true} />
+        <Image src="/images/quotus-logo.webp" alt='logo quotus' width={200} height={200} priority={true} />
         <div className={style.sidebarIcons}>
           {dataIconsLink.map((item, key) => (
             <IconLink text={item.text} Icon={item.icon} key={key} select={item.select} route={item.route} />

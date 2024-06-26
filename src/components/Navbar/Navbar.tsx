@@ -59,7 +59,7 @@ export default function Navbar() {
         <section className={style.navbarSection} >
             <MenuIcon className={style.menuBurgerIcon} onClick={handleMenu} />
             <div className={style.logoContainer} onClick={() => router.push('/')}>
-                <Image src="/images/quotus-logo.png" alt='logo quotus' width={200} height={200} priority={true} />
+                <Image src="/images/quotus-logo.webp" alt='logo quotus' width={200} height={200} priority={true} />
             </div>
             <nav className={` ${style.navbarContainer} ${isMenuOpen ? style.active : ''}`}>
                 {navItems.map((item, index) => (
