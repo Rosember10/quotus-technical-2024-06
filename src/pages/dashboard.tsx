@@ -97,6 +97,9 @@ const Dashboard = () => {
           {dataIconsLink.map((item, key) => (
             <IconLink text={item.text} Icon={item.icon} key={key} select={item.select} route={item.route} />
           ))}
+          <div className={style.logoutContainer}>
+            <IconLink text='Logout' Icon={IoExitOutline} select={true} route='/'/>
+          </div>
         </div>
       </div>
       <div className={style.mainContent}>

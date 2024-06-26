@@ -30,6 +30,11 @@
     gap: 3rem;
 }
 
+.logoutContainer{
+    border-top: 0.09rem solid #8B8A8F;
+    padding: 1rem;
+}
+
 /* Main content Dashboard */
 
 .mainContent {

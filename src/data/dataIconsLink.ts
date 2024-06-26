@@ -36,10 +36,10 @@ export const dataIconsLink:DataIconsLinkProps[] = [
       text: 'Profile',
       icon: CiUser
     },
-    {
-      text: 'Logout',
-      icon: IoExitOutline,
-      select:true,
-      route:'/'
-    }
+    // {
+    //   text: 'Logout',
+    //   icon: IoExitOutline,
+    //   select:true,
+    //   route:'/'
+    // }
   ]
