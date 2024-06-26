@@ -3,6 +3,7 @@ import style from '../styles/home.module.css'
 import Header from '@/components/Header/Header';
 import { carBrandIcons } from '@/data/dataBrandsIcons';
 import About from '@/components/About/About';
+import Footer from '@/components/Footer/Footer';
 const Home = () => {
 
 
@@ -24,6 +25,7 @@ const Home = () => {
         </section>
           <About/>
       </main>
+      <Footer/>
     </>
   );
 };
