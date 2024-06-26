@@ -1,4 +1,6 @@
 .container {
+    background: url('../../../public/images/background.svg')no-repeat;
+    background-size: cover;
     padding: 2rem 6% 1rem;
     display: flex;
     flex-direction: column;
@@ -14,7 +16,7 @@
 
 .container p {
     text-align: center;
-    width: 60ch;
+    width: 50ch;
     margin-top: 1.2rem;
     font-size: clamp(0.8rem,2vw,1.5rem);
    
@@ -22,5 +24,17 @@
 
 .container button {
     margin-top: 1.8rem;
-    width: 20%;
+    width: 15rem;
 }
+
+.imageContainer{
+    margin-top: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
