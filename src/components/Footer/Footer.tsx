@@ -4,7 +4,7 @@ import style from './footer.module.css'
 const Footer = () => {
   return (
     <footer className={style.container}>
-        <p> © Quotus Technical Test -  2023 Rosemberg Lopez  </p>
+        <p> © Quotus Technical Test -  2024 Rosemberg Lopez  </p>
     </footer>
   )
 }
