@@ -1,5 +1,40 @@
 .header {
     max-width: 1600px;
     margin: auto;
+}
+
+/*Brands icons*/
+
+.brandsSection {
     
+    background-color: black;
+    max-width: 1600px;
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 6% 1rem;
+}
+
+.brandsSection h2 {
+    color: white;
+    font-size: clamp(1rem, 2vw, 2rem);
+    font-weight: 700;
+    text-align: center;
+    margin: 1rem 0rem;
+}
+
+.brandsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.brandsContainer svg {
+    color: white;
+    width: 4rem;
+    height: 4rem;
 }

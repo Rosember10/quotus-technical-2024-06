@@ -8,6 +8,6 @@ interface NavItemProps {
  */
 export const navItems: NavItemProps[] = [
     { path: '/', label: 'Features' },
-    { path: '/', label: 'Demo' },
+    { path: '/dashboard', label: 'Demo' },
     { path: '/', label: 'About' }
 ]

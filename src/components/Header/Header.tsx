@@ -3,9 +3,13 @@ import style from './header.module.css'
 import ActionButton from '../utils/ActionButton/ActionButton';
 import { IoIosArrowRoundForward } from "react-icons/io";
 import Image from 'next/image';
-
+import { carBrandIcons } from '@/data/dataBrandsIcons';
 
 const Header = () => {
+
+
+
+
     return (
         <div className={style.container}>
             <h1> Input financial. <br /> Output intelligence. </h1>

@@ -1,6 +1,5 @@
 .container {
-    background: url('../../../public/images/background.svg')no-repeat;
-    background-size: cover;
+
     padding: 2rem 6% 1rem;
     display: flex;
     flex-direction: column;
@@ -28,13 +27,26 @@
 }
 
 .imageContainer{
-    margin-top: 1.8rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    /* background: url('../../../public/images/background.svg')no-repeat;
+    background-size: cover;
+    background-position: center; */
+    margin: 2rem 0rem;
 }
 
+.imageContainer img {
+    object-fit: cover;
+    /* filter: drop-shadow(0 0 .2rem #16EDC3); */
+    animation: glowAnimation 1s infinite alternate;
+}
 
+@keyframes glowAnimation {
+    0% {
+        filter: drop-shadow(0 0 .1rem #16EDC3);
 
+    }
 
+    100% {
+        filter: drop-shadow(0 0 .3rem #16EDC3);
+
+    }
+}

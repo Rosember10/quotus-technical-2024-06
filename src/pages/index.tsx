@@ -1,16 +1,27 @@
 import Navbar from '@/components/Navbar/Navbar';
 import style from '../styles/home.module.css'
 import Header from '@/components/Header/Header';
-
+import { carBrandIcons } from '@/data/dataBrandsIcons';
 const Home = () => {
+
 
 
   return (
     <>
       <header className={style.header}>
         <Navbar />
-        <Header/>
+        <Header />
       </header>
+      <main>
+        <section className={style.brandsSection}>
+          <h2>Automotive brands supported</h2>
+          <div className={style.brandsContainer}>
+            {carBrandIcons.map((Icon, key) => (
+              <Icon key={key} />
+            ))}
+          </div>
+        </section>
+      </main>
     </>
   );
 };

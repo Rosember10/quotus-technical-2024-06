@@ -3,7 +3,7 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    gap:0.5rem;
+    gap:0.4rem;
     align-items: center;
     justify-content: center;
     color: white;
@@ -29,8 +29,10 @@
 
 .buttonContainer:hover{
     background-color:#0E0E0E;
+    color: #16EDC3;
 }
 
 .buttonContainer:hover svg {
-    transform: translateX(0.8rem);
+    transform: translateX(0.6rem);
+    color: #16EDC3;
 }
