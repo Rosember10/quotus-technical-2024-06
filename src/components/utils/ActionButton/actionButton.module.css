@@ -1,0 +1,35 @@
+.buttonContainer {
+    font-family: "Lato", sans-serif;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap:0.5rem;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: black;
+    border-radius: 1.8rem;
+    height: 2.8rem;
+    transition: all 0.6s ease;
+    padding: 1.5rem;
+}
+
+.buttonContainer span {
+    font-size: 1.2rem;
+    padding: 0.2rem;
+    margin-bottom: 0.2rem;
+}
+
+.buttonContainer svg {
+    width: 2rem;
+    height: 4rem;
+    transition: all 0.6s ease;
+}
+
+.buttonContainer:hover{
+    background-color:#0E0E0E;
+}
+
+.buttonContainer:hover svg {
+    transform: translateX(1rem);
+}
