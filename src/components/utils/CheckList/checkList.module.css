@@ -7,5 +7,5 @@
 }
 
 .container span {
-    font-size: 1.2rem;
+    font-size: clamp(0.9rem,2vw,1.2rem);
 }

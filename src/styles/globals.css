@@ -9,3 +9,7 @@
   font-style: normal;
 }
 
+body.menu-open {
+  overflow: hidden;
+}
+

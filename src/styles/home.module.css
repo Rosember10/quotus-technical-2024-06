@@ -1,12 +1,21 @@
 .header {
     max-width: 1600px;
     margin: auto;
+    background: url('../../public/images/background-quotus.svg')no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.main {
+    background-color: black;
+    max-width: 1600px;
+    margin: auto;
 }
 
 /*Brands icons*/
 
 .brandsSection {
-    
+
     background-color: black;
     max-width: 1600px;
     margin: auto;

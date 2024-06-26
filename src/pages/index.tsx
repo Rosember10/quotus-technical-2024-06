@@ -2,6 +2,7 @@ import Navbar from '@/components/Navbar/Navbar';
 import style from '../styles/home.module.css'
 import Header from '@/components/Header/Header';
 import { carBrandIcons } from '@/data/dataBrandsIcons';
+import About from '@/components/About/About';
 const Home = () => {
 
 
@@ -12,7 +13,7 @@ const Home = () => {
         <Navbar />
         <Header />
       </header>
-      <main>
+      <main className={style.main}>
         <section className={style.brandsSection}>
           <h2>Automotive brands supported</h2>
           <div className={style.brandsContainer}>
@@ -21,6 +22,7 @@ const Home = () => {
             ))}
           </div>
         </section>
+          <About/>
       </main>
     </>
   );

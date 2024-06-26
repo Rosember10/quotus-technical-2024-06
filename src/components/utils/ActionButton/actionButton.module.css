@@ -29,10 +29,10 @@
 
 .buttonContainer:hover{
     background-color:#0E0E0E;
-    color: #16EDC3;
+    /* color: #16EDC3; */
 }
 
 .buttonContainer:hover svg {
     transform: translateX(0.6rem);
-    color: #16EDC3;
+    /* color: #16EDC3; */
 }

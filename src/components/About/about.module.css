@@ -1,0 +1,39 @@
+.container{
+    width: 100%;
+    margin: 1rem 0rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    color: white;
+    padding: 2rem 6% 1rem;
+}
+
+/*Feature container*/
+
+.featureContainer h2 {
+  font-size: clamp(1rem,2.5vw,2rem);
+  margin: 1rem 0rem;
+}
+
+.featureContainer p {
+    font-size: clamp(0.9rem,2vw,1.2rem);
+    width: 70%;
+    margin: 1rem 0rem;
+}
+
+/*CheckList  container*/
+.checkListContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.imageContainer,
+.featureContainer{
+    width: 100%;
+}
+
+.imageContainer img{
+    border-radius: 0.3rem;
+}
