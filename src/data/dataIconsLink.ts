@@ -4,8 +4,9 @@ import { LuDownloadCloud } from "react-icons/lu";
 import { MdOutlineAnalytics } from "react-icons/md";
 import { CiUser } from "react-icons/ci";
 import { IconType } from 'react-icons';
-import { IoExitOutline } from "react-icons/io5";
 
+
+// Interface defining the structure for icon link data
 interface DataIconsLinkProps{
     text:string;
     icon: IconType;
@@ -13,6 +14,7 @@ interface DataIconsLinkProps{
     route?:string;
 }
 
+// Array containing the data for each icon link
 export const dataIconsLink:DataIconsLinkProps[] = [
     {
       text: 'General',
@@ -36,10 +38,4 @@ export const dataIconsLink:DataIconsLinkProps[] = [
       text: 'Profile',
       icon: CiUser
     },
-    // {
-    //   text: 'Logout',
-    //   icon: IoExitOutline,
-    //   select:true,
-    //   route:'/'
-    // }
   ]

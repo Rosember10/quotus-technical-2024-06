@@ -1,10 +1,11 @@
-
+// Interface defining the structure for Quotus feature items
 interface quotusFeaturesProps{
     id:number;
     text:string;
 }
 
-export const quotusFeatures = [
+// Array containing the features of Quotus
+export const quotusFeatures:quotusFeaturesProps[] = [
     {
      id:1,
      text:'Quotus simplifies financial data consolidation. '
