@@ -1,0 +1,83 @@
+
+
+.navbarSection {
+    font-family: "Lato", sans-serif;
+    width: 100%;
+    padding: 2rem 6% 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logoContainer {
+    gap: .5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.navbarContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 8rem;
+}
+
+.navbarContainer a {
+    font-weight: 500;
+    color: black;
+}
+
+.menuBurgerIcon {
+    display: none;
+}
+
+
+/* Responsive Design */
+@media (max-width:1024px) {
+
+    .navbarSection {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .logoContainer {
+        margin: 0 auto;
+    }
+
+    .menuBurgerIcon {
+        display: block;
+        position: absolute;
+        left: 6%;
+        cursor: pointer;
+        width: 1.5rem;
+        height: auto;
+    }
+
+    .navbarContainer.active {
+        display: flex;
+        opacity: 1;
+        z-index: 9;
+        transition: opacity 0.3s ease;
+    }
+
+    .navbarContainer {
+        flex-direction: column;
+        margin-top: 2rem;
+        gap: 4rem;
+        align-items: center;
+        position: absolute;
+        top: 100%;
+        height: 100vh;
+        left: 0;
+        right: 0;
+        background-color: white;
+        padding: 0rem 6% 1rem;
+        opacity: 0;
+        z-index: -1;
+    }
+
+}
