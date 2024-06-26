@@ -1,23 +1,6 @@
-import React, { useEffect, useState } from 'react'
-import {
-  Box,
-  Heading,
-  Text,
-  TableContainer,
-  Table,
-  Th,
-  Td,
-  Thead,
-  Tbody,
-  Tr,
-  VStack,
-  useDisclosure,
-  HStack,
-  IconButton,
-} from "@chakra-ui/react";
-import {
-  Chart, LineElement, Title, Tooltip, Legend, LinearScale, CategoryScale, PointElement, BarElement, Filler,
-} from "chart.js";
+import React, { useCallback, useEffect, useState } from 'react'
+import {Box,Heading,Text,TableContainer,Table, Th,Td, Thead, Tbody,Tr,VStack,useDisclosure,HStack,IconButton,} from "@chakra-ui/react";
+import { Chart, LineElement, Title, Tooltip, Legend, LinearScale, CategoryScale, PointElement, BarElement, Filler,} from "chart.js";
 import style from '../styles/dashboard.module.css';
 import Image from 'next/image';
 import IconLink from '@/components/utils/IconLink/IconLink';
@@ -35,17 +18,7 @@ import { Line, Bar } from "react-chartjs-2";
 import { getReactSelectOptionsFromDealerships, getReactSelectOptionsFromGroupedKpis, getReactSelectOptionsFromKpis } from '@/utils/helper';
 
 
-Chart.register(
-  LineElement,
-  Title,
-  Tooltip,
-  Legend,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  BarElement,
-  Filler,
-);
+Chart.register(LineElement,Title, Tooltip, Legend, CategoryScale,LinearScale,PointElement, BarElement, Filler,);
 
 const Dashboard = () => {
 
@@ -68,33 +41,31 @@ const Dashboard = () => {
   ] = useState<Option>();
 
 
-  const { isOpen, onToggle } = useDisclosure();
-
-
-  // FETCHES
-  useEffect(() => {
-    const fetchData = async () => {
+  const fetchData = useCallback(async () => {
+    setLoading(true);
+    try {
       const response = await fetch(kpiManagerApi);
       const data: KpiManagerResponse = await response.json();
-
-      const {
-        dealerships,
-        groupedByFormatKpis: groupedKpis,
-        kpiData,
-        allKpis,
-        groupedByFormatAndFirstWordKpis,
-      } = data;
-
+      const { dealerships, groupedByFormatKpis: groupedKpis, kpiData, allKpis,groupedByFormatAndFirstWordKpis, } = data;
       setDealerships(dealerships);
       setKpis(allKpis);
       setKpiData(kpiData);
       setGroupedbyFormatKpis(groupedKpis);
       setGroupedbyFormatAndFirstWordKpis(groupedByFormatAndFirstWordKpis);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    } finally {
       setLoading(false);
-    };
+    }
+  }, [kpiManagerApi]);
 
+
+  // FETCHES
+  useEffect(() => {
     fetchData();
-  }, []);
+  }, [fetchData]);
+
+
 
 
   // CUSTOM HOOKS
@@ -118,22 +89,18 @@ const Dashboard = () => {
   });
 
 
-  const sidenavWidth = isOpen ? "250px" : "0";
-  const sidenavTransition = "width 0.3s";
-
   return (
     <section className={style.container}>
       <div className={style.sidebar}>
-        <Image src="/images/quotus-logo.png" alt='logo quotus' width={200} height={200} loading="lazy" />
+        <Image src="/images/quotus-logo.png" alt='logo quotus' width={200} height={200} priority={true} />
         <div className={style.sidebarIcons}>
           {dataIconsLink.map((item, key) => (
-            <IconLink text={item.text} Icon={item.icon} key={key} select={item.select}/>
+            <IconLink text={item.text} Icon={item.icon} key={key} select={item.select} route={item.route} />
           ))}
-
         </div>
       </div>
       <div className={style.mainContent}>
-      <h1>This Dashboard is a demo and some features are limited.</h1>
+        <h1>This Dashboard is a demo and some features are limited.</h1>
         <div className={style.titleContainer}>
           <MdOutlineAnalytics />
           <h2 >Analytics</h2>
