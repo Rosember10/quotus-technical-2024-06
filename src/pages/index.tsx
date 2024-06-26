@@ -1,16 +1,17 @@
 import Navbar from '@/components/Navbar/Navbar';
 import style from '../styles/home.module.css'
+import Header from '@/components/Header/Header';
 
 const Home = () => {
- 
+
 
   return (
-   <>
-   <header>
-    <Navbar/>
-    <div>hola</div>
-   </header>
-   </>
+    <>
+      <header className={style.header}>
+        <Navbar />
+        <Header/>
+      </header>
+    </>
   );
 };
 
